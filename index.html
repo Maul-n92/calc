@@ -9,70 +9,35 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="manager_href"><a href="/admin.html" >Перейти на страницу менеджера</a></div>
-
-    <h1 class="title">​Рассчитайте примерный платеж</h1>
-
-    <form class="parameters">
-
-        <h3 class="points">Тип программы</h3>
-        <p>
-            <input id="amount" type="text" class="choice price">
-        </p>
-        <div id="slider-range" class="slider-range"></div>
-
-
-       
-
-        <h3 class="points">Цена недвижимости</h3>
-        <p>
-            <input id="amount" type="number" class="choice price">
-        </p>
-        <div id="slider-range" class="slider-range"></div>
-
-        <h3 class="points">Первоначальный взнос</h3>
-        <p>
-            <input id="amount-contribution" type="number" class="choice price contrib">
-            <span id="percents" class="percents"></span>
-        </p>
-        <div id="slider-range-contribution" class="slider-range contribution"></div>
-        
-        <h3 class="points">Срок кредита</h3>
-        <p>
-            <input id="amount-time" type="number" class="choice price time">
-            <span id="time" class="time"></span>
-        </p>
-        <div id="slider-range-time" class="slider-range time"></div>
-
-    </form>
-
-    <section class="calculation">
-        <div class="calculation_results-row calculation_results-row-top">
-            <div class="calculation_result">
-                <div class="calculation_title">Сумма кредита</div>
-                <span class="calculation_value calculation_value-sum" ></span>
+    <div class="megablock">
+        <h1>Калькулятор ипотеки</h1>
+        <div class="superblock">
+            <div class="block1">
+                <div class="underblcok">
+                    <span class="block">
+                        <input type="number" class="price" placeholder="Цена недвижимости">
+                    </span>
+                    <span class="block">
+                        <input type="number" class="payment1" placeholder="Первоначальный взнос">
+                    </span>
+                </div>
+                <div class="underblock">
+                    <input type="number" class="period" placeholder="Срок кредита">
+                </div>
+                <div class="button">
+                    <button class="btn" type="submit">Расчитать</button>
+                </div>
             </div>
-            <div class="calculation_result calculation_result-right">
-                <div class="calculation_title">Ежемесячный платеж</div>
-                <span class="calculation_value calculation_value-payment" ></span>
+            <div class="block2">
+                <div><p>Сумма кредита</p></div>
+                <div class="result1"></div>
+                <div><p>Ежемесячный платеж</p></div>
+                <div class="result2"></div>
+                <div><p>Процентная ставка</p></div>
+                <div class="result3">6,9%</div>
             </div>
         </div>
-
-        <div class="calculation_results-row">
-            <div class="calculation_result">
-                <div class="calculation_title">Необходимый доход</div>
-                <span class="calculation_value calculation_value-income" ></span>
-            </div>
-            <div class="calculation_result calculation_result-right">
-                <div class="calculation_title">Процентная ставка</div>
-                <span class="calculation_value calculation_value-rate" ></span>
-            </div>
-        </div>
-
-        <canvas id="chart" class="chart" width="560" height="400"></canvas>
-        
-    </section>
-
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
